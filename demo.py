@@ -59,14 +59,14 @@ if enfoque == 'LLM Tradicional':
 else:
     summary_method = st.selectbox('Selecciona el método de resumen', ['Document Summary Index', 'Summary Index'])
     st.write(
-        "Un Index es una estructura de datos compuesta por objetos de la clase `Document`, que facilita la consulta a través de un LLM.\n\n"
+        "Un Index es una estructura de datos organizada en nodos a partir de los cuales se obtiene el resumen del documento.\n\n"
         "A continuación, se puede optar entre dos métodos distintos para estructurar los datos, lo que resultará en diferentes tipos de resúmenes de los BOEs."
     )
 
 # Botón para generar el resumen con un spinner de carga
 if st.button('Generar Resumen'):
     with st.spinner('Generando resumen...'):
-        time.sleep(10) # Simular un proceso de carga
+        time.sleep(5) # Simular un proceso de carga
 
         # Cargar el contenido del PDF seleccionado
         file_path = os.path.join(path, selected_file + ".pdf")
