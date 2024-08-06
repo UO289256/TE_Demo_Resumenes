@@ -66,7 +66,7 @@ else:
 # Botón para generar el resumen con un spinner de carga
 if st.button('Generar Resumen'):
     with st.spinner('Generando resumen...'):
-        time.sleep(2) # Simular un proceso de carga
+        time.sleep(0.5) # Simular un proceso de carga
 
         # Cargar el contenido del PDF seleccionado
         file_path = os.path.join(path, selected_file + ".pdf")
