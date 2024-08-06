@@ -105,19 +105,57 @@ def resumenes(enfoque, BOE):
 
     elif enfoque == "summaryindex":
         if BOE == "BOE-A-2015-6119":  #1
-            resumen = """
+            
+            resumen1 = """
             Este documento oficial del gobierno español, emitido por el Ministerio de Industria, Energía y Turismo, autoriza a Enagás Transporte, S.A.U. a cerrar y desmantelar una estación de regulación de gas (ER) en Otero, Asturias, y sus instalaciones asociadas. La resolución especifica que la empresa debe obtener un Acta de Cierre de la Dirección del Área de Industria y Energía de la Delegación del Gobierno en Asturias dentro de los tres meses posteriores a la entrada en vigor de la resolución, cumpliendo así con todas las condiciones establecidas para el cierre y desmantelamiento.
             """
-            return resumen
+            
+            resumen2 = """
+            Este conjunto de texto parece ser un documento oficial del gobierno, específicamente una resolución emitida por el Ministerio de Industria, Energía y Turismo. La resolución autoriza a Enagás Transporte SAU a cerrar y desmantelar una estación de regulación de gas (ER) ubicada en Otero, Asturias. El cierre está sujeto a ciertas condiciones, incluyendo la presentación de un plan para el cierre y desmantelamiento de la estación, la eliminación de materiales peligrosos, y la notificación del destino final y la reutilización o reciclaje del equipo retirado.
+            """
+            
+            resumen3 = """
+            Este conjunto de texto parece ser un documento gubernamental, específicamente una resolución que autoriza el cierre y desmantelamiento de una estación de regulación (ER) en Otero, España. La ER es propiedad de Enagás Transporte, S.A.U., y la autorización se concede después de varios informes de distintas agencias y una revisión de las regulaciones pertinentes. La resolución detalla los términos de la autorización, incluyendo el plazo para la finalización, los procedimientos para la eliminación de materiales y cualquier ingreso o beneficio potencial derivado del cierre.
+            """
+            
+            resumen4 = """
+            Este conjunto de textos parece ser una resolución gubernamental que autoriza el cierre y desmantelamiento de una estación de regulación de energía en Otero, España. La resolución fue emitida por el Ministerio de Industria, Energía y Turismo el 22 de mayo de 2015, y publicada en el Boletín Oficial del Estado (BOE) el 2 de junio de 2015. La resolución detalla los términos y condiciones para el cierre y desmantelamiento de la estación, incluyendo los requisitos para obtener un Acta de Cierre de las autoridades competentes y la eliminación de materiales.
+            """
+            
+            resumen5 = """
+            Este conjunto de textos parece ser un documento formal del gobierno, específicamente una resolución emitida por el Ministerio de Industria, Energía y Turismo, que autoriza a Enagás Transporte SAU a cerrar y desmantelar una instalación conocida como la Estación de Regulación (ER) en Otero. La resolución detalla los términos y condiciones para el cierre y desmantelamiento, incluyendo el requisito de obtener un Acta de Cierre de la Dirección del Área de Industria y Energía de la Delegación del Gobierno en Asturias dentro de un plazo determinado.
+            """
+            
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2019-2031":  #2
-            resumen = """
+            resumen1 = """
             Este resumen trata sobre una disputa relacionada con un decreto-ley emitido por el Gobierno de Aragón, que busca resolver problemas sociales vinculados a la vivienda y a la reestructuración del sector bancario. El decreto-ley incluye medidas como la suspensión de procedimientos de desalojo para personas vulnerables, la provisión de asistencia financiera y la asignación de viviendas vacías para asegurar que todos tengan acceso a condiciones de vida dignas.
             """
-            return resumen
+            
+            resumen2 = """
+            Este conjunto de textos parece ser un caso legal que involucra una queja constitucional contra ciertas disposiciones de un decreto-ley aprobado por la Comunidad Autónoma de Aragón. El demandante argumenta que estas disposiciones infringen varios artículos constitucionales, incluidos aquellos relacionados con los derechos de propiedad, el principio de reserva de ley y las competencias asignadas al Estado.
+            """
+            
+            resumen3 = """
+            Este conjunto de textos parece ser una serie de documentos legales relacionados con impugnaciones constitucionales en España. Los principales temas tratados incluyen disputas sobre la constitucionalidad de decretos-leyes aprobados por los gobiernos regionales, particularmente aquellos relacionados con cuestiones de vivienda y bienestar social. La colección también aborda preguntas sobre la competencia entre el gobierno central y las autoridades regionales, así como la aplicación de principios constitucionales como la proporcionalidad y la protección del derecho a una vivienda digna.
+            """
+            
+            resumen4 = """
+            Un resumen de este conjunto de textos parece ser un documento legal o una decisión judicial relacionada con un decreto-ley aprobado por el Gobierno de Aragón en España. El documento discute varios aspectos del decreto-ley, incluyendo su constitucionalidad y su cumplimiento con las leyes nacionales.
+            """
+            
+            resumen5 = """
+            Este conjunto de textos parece ser una serie de documentos legales que discuten la constitucionalidad de un decreto-ley aprobado por el Gobierno de Aragón en España. Los documentos analizan varios aspectos del decreto-ley, incluyendo su compatibilidad con la Constitución Española y las leyes existentes, así como impugnaciones a su constitucionalidad en relación con los derechos de propiedad, la política de vivienda, las medidas de bienestar social y la autonomía regional.
+            """
+            
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
+            
 
         elif BOE == "BOE-A-2021-10584": #3
-            resumen = """
+            resumen1 = """
             Esta colección de textos es un conjunto integral de documentos oficiales relacionados con la política energética, la fiscalidad y las medidas económicas en España. Los textos tratan temas como:
 
             -   Medidas para enfrentar el aumento de los precios de la electricidad.
@@ -130,73 +168,278 @@ def resumenes(enfoque, BOE):
             
             -   Mitigación del impacto económico de la pandemia de COVID-19.
             """
-            return resumen
+            
+            resumen2 = """
+            Este conjunto de textos parece ser una publicación gubernamental que describe medidas para abordar el aumento de los precios de la electricidad en España. Discute la situación actual, incluyendo el impacto de la pandemia de COVID-19, y propone soluciones como la reducción de las tasas del Impuesto sobre el Valor Añadido (IVA) y la minimización del "dividendo de CO2" recibido por las plantas de energía no emisoras más antiguas. El texto también toca otros temas, incluyendo la pobreza y vulnerabilidad entre los consumidores, las energías renovables y el desarrollo económico en España.
+            """
+            
+            resumen3 = """
+            La situación en España, donde el precio de la electricidad ha aumentado significativamente, especialmente desde diciembre de 2020, debido a diversos factores como el aumento de los costos del gas y las emisiones de CO2. Este aumento ha dado lugar a un incremento sustancial en los precios de la electricidad, afectando a los hogares, especialmente a aquellos con menores ingresos. El gobierno ha propuesto medidas para reducir el impacto de estos costos incrementados en los consumidores, incluyendo una reducción temporal en la tasa del impuesto sobre el valor añadido (IVA) aplicable a ciertos suministros de energía.
+            """
+            
+            resumen4 = """
+            Este conjunto de textos parece ser una recopilación de varios decretos, leyes y regulaciones relacionadas con la energía, la economía y las finanzas en España. Los temas principales discutidos incluyen medidas destinadas a abordar el impacto del aumento de los precios de la electricidad en los consumidores, promover fuentes de energía renovable y apoyar los objetivos del gobierno de reducir las emisiones de carbono.
+            """
+            
+            resumen5 = """
+            Este conjunto de textos parece ser una recopilación de diversas leyes, decretos y regulaciones emitidos por el gobierno español. Los temas principales discutidos incluyen medidas para abordar el aumento de los precios de la electricidad, promover fuentes de energía renovable, apoyar a las empresas afectadas por la pandemia de COVID-19 y regular el sector energético.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2021-11043": #4
-            resumen = """
+            resumen1 = """
             Corrección de errores en un Real Decreto-ley sobre medidas urgentes en materia tributaria y de generación de energía.
             """
-            return resumen
+            
+            resumen2 = """
+            Se ha realizado una corrección a un decreto-ley anterior. El error estaba en un artículo referente a los contratos de suministro de electricidad, donde se especificaba "inferior a 10 kW" en lugar de "inferior o igual a 10 kW"
+            """
+            
+            resumen3 = """
+            Se ha realizado una corrección a un real decreto-ley sobre fiscalidad energética y generación de energía. El cambio afecta a un artículo en el documento original que trataba sobre contratos de suministro de energía eléctrica.
+            """
+            
+            resumen4 = """
+            Se está realizando una corrección a un decreto existente debido a un error. La corrección implica cambiar una frase específica en el Artículo 1, Punto a) en la página 76283 para que sea más precisa.
+            """
+            
+            resumen5 = """
+            Se ha realizado una corrección a un Real Decreto-ley sobre medidas en fiscalidad y generación de energía. La corrección afecta a un artículo que establece la potencia mínima contratada para los contratos de suministro de electricidad.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2021-12603": #5
-            resumen = """
+            resumen1 = """
             Esta resolución confirma la convalidación de un decreto-ley por el Congreso de los Diputados, que incluye medidas sobre la fiscalidad energética, la generación de energía y la gestión del agua. Además, ordena su publicación para conocimiento público.
             """
-            return resumen
-
+            
+            resumen2 = """
+            Esta resolución confirma la validación de un real decreto-ley por parte del Congreso de los Diputados el 21 de julio de 2021. El decreto-ley introdujo medidas relacionadas con la fiscalidad energética, la generación de energía y la regulación del uso del agua, con el objetivo de hacer públicas estas modificaciones.
+            """
+            
+            resumen3 = """
+            El Real Decreto-ley 12/2021 fue convalidado por el Congreso de los Diputados el 21 de julio de 2021. El decreto-ley adopta medidas en el ámbito de la fiscalidad energética y la generación de energía, así como en la gestión de tasas de regulación y tarifas de uso del agua.
+            """
+            
+            resumen4 = """
+            Se acordó una resolución por parte del Congreso de los Diputados el 21 de julio de 2021, respecto a la validación de un Real Decreto-ley y su publicación en el Boletín Oficial del Estado. La resolución concierne medidas urgentes relacionadas con la fiscalidad energética, la generación de energía y la gestión del agua.
+            """
+            
+            resumen5 = """
+            Se aprobó una resolución por parte del Congreso de los Diputados el 21 de julio de 2021, para validar un Real Decreto-ley que adoptó medidas urgentes en las áreas de fiscalidad energética y generación de energía, así como en la regulación y uso del agua. La resolución también ordenó la publicación de esta decisión para el conocimiento general.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
+            
         elif BOE == "BOE-A-2021-16956": #6
-            resumen = """
+            resumen1 = """
             El 17 de septiembre de 2021, la Secretaría General de Coordinación Territorial publicó una resolución sobre un acuerdo entre el Gobierno de España y la Comunidad Autónoma de Canarias. Este acuerdo busca resolver discrepancias relacionadas con un decreto-ley sobre fiscalidad energética, generación de energía y gestión del agua. La resolución especifica los términos del acuerdo, que incluyen negociaciones con el Tribunal Constitucional, la publicación en el Boletín Oficial del Estado y el Boletín Oficial de Canarias, y la notificación a las Cortes Generales y al Parlamento de Canarias.
             """
-            return resumen
+            
+            resumen2 = """
+            Se publicó una resolución por parte de la Secretaría General de Coordinación Territorial el 17 de septiembre de 2021, relativa a un acuerdo entre la Administración General del Estado y la Comunidad Autónoma de Canarias. El acuerdo tiene como objetivo resolver discrepancias relacionadas con un real decreto-ley que introdujo medidas urgentes en los campos de la fiscalidad energética, la generación de energía y la gestión del agua. La resolución incluye los términos del acuerdo y las acciones a llevar a cabo, como negociar con las partes relevantes, establecer un grupo de trabajo, comunicar el resultado a diversas instituciones y publicarlo en los diarios oficiales.
+            """
+            
+            resumen3 = """
+            Una resolución publicada en el Boletín Oficial del Estado (BOE) por la Secretaría General de Coordinación Territorial el 17 de septiembre de 2021. La resolución publica un acuerdo entre la Administración General del Estado y la Comunidad Autónoma de Canarias respecto a las medidas urgentes adoptadas en el ámbito de la fiscalidad y generación de energía, así como la gestión de tasas de regulación y tarifas de uso del agua.
+            """
+            
+            resumen4 = """
+            Una resolución de la Secretaría General de Coordinación Territorial del 17 de septiembre de 2021 publica un acuerdo entre la Administración General del Estado y la Comunidad Autónoma de Canarias respecto a medidas urgentes en el campo de la fiscalidad energética y la generación de energía. El acuerdo tiene como objetivo resolver discrepancias y propone una solución para la Comisión Bilateral de Cooperación. También requiere comunicación con el Tribunal Constitucional, las Cortes Generales y el Parlamento de Canarias.
+            """
+            
+            resumen5 = """
+            Se ha publicado una resolución por parte de la Secretaría General de Coordinación Territorial sobre un acuerdo entre la Administración General del Estado y la Comunidad Autónoma de Canarias. El acuerdo tiene como objetivo resolver discrepancias en relación con un real decreto-ley que introdujo medidas urgentes en la fiscalidad energética, la generación de energía y la gestión del uso del agua.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2021-21214":  #7
-            resumen = """
+            resumen1 = """
             Una decisión del Tribunal Constitucional sobre una ley que establece medidas urgentes en la fiscalidad y generación de energía, así como en la regulación del agua.
             """
-            return resumen
+            
+            resumen2 = """
+            Se ha tomado una decisión por parte del Tribunal Constitucional para revisar la constitucionalidad de una disposición específica en un Real Decreto-ley. La disposición en cuestión es parte de un decreto que aborda medidas urgentes en los campos de la fiscalidad energética y la generación de energía, así como la regulación y utilización del agua. La decisión se tomó después de que se presentara una petición del Parlamento de Canarias contra esta disposición.
+            """
+            
+            resumen3 = """
+            Una sentencia del Tribunal Constitucional ha sido aceptada respecto a una disposición en un decreto-ley que introdujo medidas urgentes en los campos de la fiscalidad energética y la generación de energía.
+            """
+            
+            resumen4 = """
+            Se ha admitido una decisión del Tribunal Constitucional para proceder con un recurso de inconstitucionalidad contra una disposición en un real decreto-ley. El recurso fue interpuesto por el Parlamento de Canarias y concierne a medidas para la fiscalidad energética, la generación de energía y la gestión del uso del agua.
+            """
+            
+            resumen5 = """
+            Una decisión del Tribunal Constitucional respecto a una impugnación de una disposición en un real decreto-ley relacionado con la fiscalidad energética y la gestión del agua.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2022-12754":  #8
-            resumen = """
+            resumen1  = """
             Esta colección de textos es una recopilación de documentos legales y procedimientos judiciales relacionados con una controversia sobre la aplicación de leyes que rigen las zonas costeras en España. El problema específico se centra en la interpretación de ciertos artículos y disposiciones de la Ley 7/2021, que han sido impugnados por la Xunta de Galicia.
             """
-            return resumen
+            
+            resumen2 = """
+            Esta colección de textos parece ser un documento legal relacionado con la constitucionalidad de ciertas disposiciones en la Ley 7/2021, una ley sobre cambio climático y transición energética. Los puntos principales discutidos son el principio de seguridad jurídica, el concepto de dominio público marítimo-terrestre, y el impacto de la Ley 7/2021 en las concesiones y permisos existentes relacionados con este dominio
+            """
+            
+            resumen3 = """
+            Esta colección de textos parece ser un documento legal, específicamente una decisión del Tribunal Constitucional español respecto a la constitucionalidad de ciertas disposiciones en la Ley 7/2021 sobre cambio climático y transición energética. El documento aborda diversos aspectos de la ley, incluyendo su impacto en el principio de certeza jurídica y la reserva de ley en asuntos relacionados con el dominio público.
+            """
+            resumen4 = """
+            Esta colección de textos parece ser un documento legal relacionado con un caso constitucional en España. Involucra una impugnación a ciertas disposiciones de una ley sobre cambio climático y transición energética. El principal problema en cuestión es el principio de certeza jurídica y la reserva de poder legislativo en asuntos relacionados con la propiedad del dominio público.
+            """
+            
+            resumen5 = """
+            Una colección de textos parece ser un documento legal que discute una disputa en torno a la Ley 7/2021, ley relacionada con el cambio climático y la transición energética en España. Los principales puntos de controversia giran en torno a la duración de las concesiones para áreas de dominio público marítimo-terrestre, la posible retroactividad de ciertas disposiciones, la aplicabilidad de nuevas regulaciones y la interpretación de leyes existentes.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2022-2707":  #9
-            resumen = """
+            resumen1  = """
             Este decreto-ley introduce modificaciones en varios artículos del Código Civil de Cataluña en materia de propiedad y gestión de bienes. Su objetivo es facilitar acuerdos para proyectos de eficiencia energética, promover el desarrollo sostenible y asegurar el buen funcionamiento de la comunidad.
             """
-            return resumen
+            
+            resumen2 = """
+            Una serie de decretos-leyes emitidos por el Gobierno de Cataluña tienen como objetivo modificar ciertos artículos del Código Civil Catalán en relación con la propiedad y la convivencia comunitaria. Los decretos se centran principalmente en promover fuentes de energía renovable, particularmente la energía solar, en viviendas de varias familias, mientras que también abordan la necesidad de tomar medidas urgentes durante la pandemia de COVID-19.
+            """
+            
+            resumen3 = """
+            Esta colección de textos parece ser un decreto oficial emitido por el Gobierno de Cataluña que modifica varios artículos del Código Civil de Cataluña. El decreto tiene como objetivo promover la eficiencia energética, la sostenibilidad y la accesibilidad en las propiedades, particularmente para los regímenes de propiedad comunitaria. Introduce nuevas disposiciones para los procesos de toma de decisiones, establece reglas para la instalación y mantenimiento de elementos comunes, y establece procedimientos para reparaciones y mejoras.
+            """
+            
+            resumen4 = """
+            Este decreto-ley modifica las regulaciones existentes para promover las energías renovables y la eficiencia energética en Cataluña. Tiene como objetivo mejorar la sostenibilidad y la eficiencia energética en los edificios residenciales sujetos a regímenes de propiedad horizontal mediante la instalación de sistemas de energía renovable y equipos de alta eficiencia energética. El decreto-ley establece reglas específicas para la ejecución de obras, la generación compartida de energía renovable, y la conservación y mantenimiento de las instalaciones.
+            """
+            
+            resumen5 = """"
+            Esta colección de textos parece ser modificaciones al Código Civil Catalán, específicamente al Libro Quinto, destinadas a promover la eficiencia energética y las energías renovables en edificios sujetos al régimen de propiedad horizontal. Los decretos buscan facilitar la instalación de paneles solares en techos, proporcionar continuidad en la regulación de entidades privadas, y abordar el impacto de la pandemia de COVID-19.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2022-2982":  #10
-            resumen = """
+            resumen1 = """
             Este documento corrige errores en un decreto-ley que modifica el Código Civil de Cataluña. Las correcciones se centran en problemas con el título y la exposición de motivos, en particular en lo que respecta a la instalación de sistemas de energía eficiente o renovable en edificios sometidos al régimen de propiedad horizontal.
             """
-            return resumen
+            
+            resumen2 = """
+            Este documento es una corrección de errores en un decreto-ley sobre la modificación del Libro Quinto del Código Civil de Cataluña. Las correcciones tienen como objetivo incorporar regulaciones para la eficiencia energética y del agua, así como sistemas de energías renovables, en edificios sujetos al régimen de propiedad horizontal. Además, modifica otro decreto-ley para abordar el impacto de la COVID-19 en las entidades privadas bajo la legislación civil catalana.
+            """
+            
+            resumen3 = """
+            Esta colección de textos parece ser un aviso de corrección para un decreto-ley (Decreto-Ley) publicado en el Diario Oficial de Cataluña (Diari Oficial de la Generalitat de Catalunya). El aviso corrige errores en el decreto-ley original, específicamente dos instancias donde se reemplaza "sujetos" en singular por "sujetas" en plural, y también actualiza una sección sobre el alcance de la reforma.
+            """
+            
+            resumen4 = """
+            Corrección de errores en el Decreto-ley 28/2021, que modifica el Libro Quinto del Código Civil de Cataluña y el Decreto-ley 10/2020, para incorporar regulaciones sobre eficiencia energética o hídrica y sistemas de energías renovables en edificios sujetos al régimen de propiedad horizontal.
+            """
+            
+            resumen5 = """
+            Este documento corrige errores en el Decreto-ley 28/2021, que modifica el Código Civil de Cataluña en relación con la eficiencia energética y los sistemas de energías renovables en edificios sujetos a las regulaciones de propiedad horizontal. La corrección incluye cambios en el título y en la exposición de motivos en el texto original.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2023-26461": #11
-            resumen = """
+            resumen1 = """
             Esta colección de textos constituye un conjunto de regulaciones, modificaciones y directrices relacionadas con ayudas financieras, subvenciones y programas diseñados para fomentar la eficiencia energética, las energías renovables y el desarrollo sostenible en España. Los documentos tratan sobre las reformas a programas vigentes, la simplificación de procedimientos, la introducción de nuevos principios, y establecen requisitos para garantizar la transparencia y la rendición de cuentas.
             """
-            return resumen
+            
+            resumen2 = """
+            Esta colección de textos parece ser modificaciones a las regulaciones gubernamentales relacionadas con políticas ambientales y energías renovables en España. Los documentos detallan procedimientos para implementar diversos programas, proporcionar asistencia financiera y gestionar fondos. También abordan los requisitos para la presentación de informes, auditorías y contabilidad, así como modificaciones a las regulaciones existentes y plazos para la presentación de solicitudes.
+            """
+            
+            resumen3 = """
+            Esta colección de textos parece ser una recopilación de documentos oficiales del gobierno relacionados con la recuperación económica, la transformación y la resiliencia en España. Los principales temas tratados incluyen la modificación de regulaciones para programas de ayuda destinados a promover las energías renovables y reducir la dependencia de los combustibles fósiles, la extensión del período de validez de ciertos programas hasta el 31 de julio de 2024, la simplificación de procesos administrativos y la adaptación de las regulaciones para cumplir con las directrices de la Unión Europea.
+            """
+            
+            resumen4 = """
+            Un decreto o regulación gubernamental destinado a promover las energías renovables y reducir la dependencia de los combustibles fósiles, proporcionando un marco para la implementación de programas relacionados y especificando roles y responsabilidades.
+            """
+            
+            resumen5 = """
+            Esta colección de textos parece ser una recopilación de documentos oficiales y regulaciones relacionadas con las políticas y programas gubernamentales destinados a promover la energía renovable, reducir la dependencia de los combustibles fósiles y aumentar la eficiencia energética. Los principales temas cubiertos incluyen modificaciones a las regulaciones existentes, cambios en el tratamiento del almacenamiento detrás del medidor, provisión de seguridad y certeza para los participantes en el programa, y establecimiento de reglas y procedimientos claros.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2023-9215":  #12
-            resumen = """
-            This collection of texts appears to be a compilation of official documents and court decisions related to fiscal policies and regulations in Spain. The texts discuss measures taken by the government to address the economic crisis caused by COVID-19, specifically in the Canary Islands. The documents outline changes to tax laws and regulations aimed at maintaining the region's competitiveness and supporting the film industry.
+            resumen1 = """
+            Esta colección de textos parece ser una recopilación de documentos oficiales y decisiones judiciales relacionadas con las políticas fiscales y regulaciones en España. Los textos discuten las medidas tomadas por el gobierno para abordar la crisis económica causada por la COVID-19, específicamente en las Islas Canarias. Los documentos detallan los cambios en las leyes y regulaciones fiscales destinados a mantener la competitividad de la región y apoyar a la industria cinematográfica.
             """
-            return resumen
+            
+            resumen2 = """
+            Esta colección de textos parece ser una recopilación de documentos legales y análisis relacionados con los desafíos constitucionales a los reales decretos-leyes sobre la modificación del régimen fiscal en las Islas Canarias. Los textos abordan varias cuestiones constitucionales, incluyendo el principio de estabilidad constitucional, la aprobación previa del Parlamento de Canarias, y la justificación para usar reales decretos-leyes en lugar de leyes ordinarias. Los temas principales incluyen la constitucionalidad del Real Decreto-Ley 12/2021, su relación con el régimen fiscal en las Islas Canarias y el compromiso del gobierno de apoyar a la región mediante medidas económicas.
+            """
+            
+            resumen3 = """
+            Esta colección de textos parece estar relacionada con un caso del tribunal constitucional en España sobre la modificación del régimen económico y fiscal de las Islas Canarias. La principal cuestión es si se cumplió con el informe previo requerido del Parlamento de Canarias antes de que la modificación entrara en vigor. El texto discute varias disposiciones constitucionales, incluyendo la disposición adicional tercera de la Constitución Española, que exige un informe previo del Parlamento de Canarias antes de cualquier modificación al régimen económico y fiscal de las Islas Canarias.
+            """
+            
+            resumen4 = """
+            Esta colección de textos parece ser una decisión judicial, específicamente una sentencia emitida por el Tribunal Constitucional en España sobre la constitucionalidad del Real Decreto-ley 12/2021. La ley introdujo medidas para abordar problemas relacionados con la energía y el agua, pero su disposición final tercera fue impugnada por el Parlamento de Canarias. Los puntos principales de contención se refieren a la supuesta violación de la garantía institucional del régimen económico y fiscal de Canarias, la falta de consulta previa con el Parlamento de Canarias y la falta de conexión entre el contenido de la reforma y la situación de urgencia que supuestamente la justificaba.
+            """
+            
+            resumen5 = """
+            Esta colección de textos parece estar relacionada con un caso del tribunal constitucional en España sobre la constitucionalidad de ciertas disposiciones en un Real Decreto-Ley y su impacto en el régimen económico y fiscal de las Islas Canarias. El Real Decreto-Ley modifica la Ley 19/1994, que regula el sistema económico y fiscal de las Islas Canarias, sin consulta previa con el Parlamento de Canarias.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-B-2018-54744": #13
-            resumen = """
+            resumen1 = """
             Aviso público sobre un contrato mixto (de obra y suministro) celebrado entre el Ayuntamiento de Marina de Cudeyo e Imesapi, S.A. para llevar a cabo la rehabilitación, reforma y mejora de la eficiencia energética de la iluminación pública municipal. El presupuesto asignado para este proyecto es de 1.101.860,18 euros.
             """
-            return resumen
+            
+            resumen2 = """
+            Este documento formaliza el contrato para la rehabilitación, reforma y mejora de la eficiencia energética del alumbrado público municipal. El contrato fue adjudicado a Imesapi, S.A. con un valor neto de 841.602,63 € y un valor total de 1.018.339,18 €
+            """
+            
+            resumen3 = """
+            El Ayuntamiento de Marina de Cudeyo ha formalizado un contrato mixto (obra y suministro) para la rehabilitación, reforma y mejora de la eficiencia energética de su alumbrado público municipal. El contrato fue adjudicado a Imesapi, S.A. con un valor neto de 841.602,63 € y un valor total de 1.018.339,18 €.
+            """
+            
+            resumen4 = """
+            El Ayuntamiento de Marina de Cudeyo formalizó un contrato mixto (obra y suministro) para la rehabilitación, reforma y mejora de la eficiencia energética del alumbrado público municipal. El contratista es Imesapi, S.A. y el presupuesto base de licitación es de 1.101.860 euros.
+            """
+            
+            resumen5 = """
+            Este anuncio formaliza un contrato mixto (obra y suministro) sujeto a regulación armonizada para la rehabilitación, reforma y mejora de la eficiencia energética del alumbrado público en Marina de Cudeyo. El contrato fue adjudicado a Imesapi, S.A. con un valor neto de 841.602,63 € y un valor total de 1.018.339,18 €.
+            """
+            
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
+            
 
         elif BOE == "BOE-B-2019-52073":  #14
-            resumen = """
+            resumen1 = """
             Este documento es un anuncio oficial del Boletín Oficial del Estado (BOE) que detalla el proceso de adjudicación para un proyecto destinado a mejorar la eficiencia energética y adaptar los sistemas de aire acondicionado a las normativas anti-legionella en el centro penitenciario Evaristo Martín Nieto, ubicado en Málaga. El contrato ha sido concedido a VIVENDIO SOSTENIBILIDAD ENERGÉTICA, S.L., una PYME, con un valor cercano a los 93.000 euros.
             """
-            return resumen
+            
+            resumen2 = """
+            Este documento es un anuncio oficial del Boletín Oficial del Estado (BOE) del gobierno español respecto a un proceso de contratación pública. El contrato específico es para la mejora de la eficiencia energética y la adaptación de los sistemas de aire acondicionado a los requisitos normativos contra la legionella en el Centro Penitenciario Evaristo Martín Nieto en Málaga, España. El anuncio proporciona detalles sobre la entidad contratante, el proceso de licitación, el adjudicatario ganador y los aspectos financieros del contrato.
+            """
+            
+            resumen3 = """
+            Este documento es un anuncio para un proceso de contratación pública por parte de la Subdirección General de Servicios Penitenciarios dentro del Ministerio del Interior. El proyecto implica la actualización de la eficiencia energética y la adaptación del sistema de aire acondicionado en el C.I.S. Evaristo Martín Nieto en Málaga para cumplir con la normativa sobre legionella.
+            """
+            
+            resumen4 = """
+            Este documento es un anuncio oficial de la Subdirección General de Servicios Penitenciarios del Ministerio del Interior sobre la formalización de contratos para un proyecto de mejora de la eficiencia energética y adaptación del sistema de aire acondicionado en el C.I.S. Evaristo Martín Nieto en Málaga, España. El contrato fue adjudicado a Vivendio Sostenibilidad Energética, S.L. con un valor de 93.158,91 euros.
+            """
+            
+            resumen5 = """
+            Este documento es un anuncio oficial de la Subdirección General de Servicios Penitenciarios del Ministerio del Interior respecto a la formalización de contratos para la mejora de la eficiencia energética y adaptación a la normativa anti-legionella en el centro penitenciario Evaristo Martín Nieto en Málaga.
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            return random.choice(resumenes)
 
     elif enfoque == "documentsummaryindex":
         if BOE == "BOE-A-2015-6119":
@@ -255,10 +498,26 @@ def resumenes(enfoque, BOE):
                 Además, este texto también puede proporcionar información sobre el marco legal que regula el proceso de autorización, el papel de las diferentes agencias gubernamentales y los procedimientos para la supervisión del cumplimiento de la resolución.
                 """
                 
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
-            return random.choice(resumenes)
+            resumen4 = """
+                Resumen generado para el documento BOE-A-2015-6119.pdf: Basado en el texto proporcionado, parece ser un documento oficial del gobierno, específicamente una resolución del Ministerio de Industria, Energía y Turismo respecto al cierre y desmantelamiento de una estación de regulación de gas.
 
-            return 
+                Este texto puede responder preguntas como:
+
+                * ¿Cuál es el propósito de la resolución?
+                
+                * ¿Quiénes son los afectados por esta resolución?
+                
+                * ¿Cuáles son las condiciones para el cierre y desmantelamiento de la estación de regulación de gas?
+                
+                * ¿Cómo debe proceder la empresa "Enagás Transporte, S.A.U." con el proceso de cierre y desmantelamiento?
+                
+                * ¿Cuáles son las consecuencias si la empresa no cumple con las condiciones establecidas en la resolución?
+
+                En general, este texto proporciona información sobre una decisión gubernamental específica respecto al cierre de una estación de regulación de gas, y puede ser utilizado para responder preguntas relacionadas con los detalles de dicha decisión.
+                                """
+                
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
+            return random.choice(resumenes)
 
         elif BOE == "BOE-A-2019-2031":
             resumen1 = """
@@ -321,7 +580,29 @@ def resumenes(enfoque, BOE):
             
             •   ¿Cuáles son las implicaciones de esta decisión para futuras iniciativas legislativas de las Comunidades Autónomas (Aragón) en relación con los derechos de propiedad y los procedimientos de ejecución hipotecaria?
                         """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4 = """
+                El texto proporcionado parece ser un documento legal, específicamente una sentencia del Tribunal Constitucional en España. Trata sobre la constitucionalidad de ciertos artículos y disposiciones dentro del Decreto-ley del Gobierno de Aragón 3/2015, una ley-decreto aprobada por el gobierno regional de Aragón.
+
+                Este texto puede responder preguntas relacionadas con:
+
+                * La constitucionalidad de leyes o regulaciones específicas
+                
+                * La distribución de poderes entre el gobierno central y las autoridades regionales en España
+                
+                * El alcance de las competencias estatales, particularmente en lo referente a la legislación sobre derechos de propiedad y procedimientos de ejecución
+                
+                * Las implicaciones de ciertas disposiciones legales sobre los derechos y libertades individuales
+
+                Algunas posibles preguntas de seguimiento que podrían ser respondidas por este texto incluyen:
+
+                * ¿Cuáles son las principales cuestiones constitucionales en juego en este caso?
+                
+                * ¿Cómo afecta la decisión del Tribunal Constitucional la relación entre el gobierno central y las autoridades regionales en España?
+                
+                * ¿Se pueden proporcionar ejemplos específicos para ilustrar cómo estas disposiciones legales afectan los derechos o libertades individuales?
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2021-10584":
@@ -386,7 +667,23 @@ def resumenes(enfoque, BOE):
 
             En general, este texto parece ser un documento oficial que proporciona información sobre la política energética en España y puede ofrecer respuestas a preguntas relacionadas con este tema.
                         """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4 = """
+                El texto proporcionado parece ser un documento gubernamental, específicamente un Real Decreto-ley de España, fechado en junio de 2021. El texto trata sobre el aumento de los precios de la electricidad en España y el impacto que esto tiene en los consumidores, particularmente en aquellos con menores ingresos. También describe las medidas que el gobierno está tomando para abordar este problema, incluyendo la reducción del tipo del Impuesto sobre el Valor Añadido (IVA) aplicable a ciertos contratos de suministro de energía.
+
+                Algunas preguntas que este texto puede responder incluyen:
+
+                * ¿Cuáles son los precios actuales de la electricidad en España?
+                
+                * ¿Cómo están afectando a los consumidores los aumentos de los precios de la electricidad, especialmente a aquellos con menores ingresos?
+                
+                * ¿Qué medidas está tomando el gobierno español para abordar estos aumentos de precios y aliviar la carga sobre los consumidores?
+                
+                * ¿Cómo afectará a los consumidores y las empresas la reducción del tipo del IVA aplicable a ciertos contratos de suministro de energía?
+                
+                * ¿Cuál es el impacto de estos aumentos de precios en la economía general y el medio ambiente?
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
             
 
@@ -429,7 +726,22 @@ def resumenes(enfoque, BOE):
 
                 En general, este documento detalla la corrección de errores en la normativa original y proporciona información sobre cómo estas correcciones impactan a los sujetos afectados y cómo consultar la corrección oficial.
                             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4 = """
+                El texto proporcionado parece ser un documento oficial del gobierno, específicamente una nota de corrección publicada en el Boletín Oficial del Estado (BOE). El documento corrige errores en un Real Decreto-ley anterior relacionado con la política fiscal energética y la generación de electricidad.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Qué correcciones se hicieron a un Real Decreto-ley específico?
+                
+                * ¿Qué cambios se implementaron en el artículo o disposición original?
+                
+                * ¿Cómo afectó la corrección al significado o intención original de la ley?
+                
+                * ¿Cuáles son las implicaciones de esta corrección en las políticas o regulaciones relacionadas?
+            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2021-12603":
@@ -481,7 +793,22 @@ def resumenes(enfoque, BOE):
 
                 En general, el texto parece ser una notificación formal o un comunicado de prensa del gobierno español sobre una acción oficial tomada por el Congreso de los Diputados.
                             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4 = """
+                El texto proporcionado parece ser una resolución aprobada por el Congreso de los Diputados (la cámara baja del parlamento español) el 21 de julio de 2021, respecto a la convalidación de un real decreto-ley y medidas relacionadas en el sector energético.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Cuál es el propósito del Real Decreto-ley 12/2021?
+                
+                * ¿Cuáles son las medidas urgentes tomadas por el gobierno en el sector energético?
+                
+                * ¿Quién convalidó el Real Decreto-ley y cuándo fue publicado?
+                
+                * ¿Cuál es el contexto detrás de la convalidación de este decreto-ley?
+            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2021-16956":
@@ -531,7 +858,22 @@ def resumenes(enfoque, BOE):
 
                 En general, el texto proporciona información sobre el acuerdo y su procedimiento de publicación y comunicación a las instituciones relevantes.
             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4 = """
+                El texto proporcionado parece ser una resolución o decreto gubernamental relacionado con la política energética y fiscal en España, específicamente en lo que respecta a las Islas Canarias. Expone un acuerdo entre el gobierno central y la Comunidad Autónoma de Canarias sobre la adopción de medidas urgentes en las áreas de fiscalidad energética y gestión del agua.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Cuál es el contenido del acuerdo alcanzado entre el gobierno central y la Comunidad Autónoma de Canarias?
+                
+                * ¿Cuáles son los puntos clave del Real Decreto-ley 12/2021 a los que se refiere este acuerdo?
+                
+                * ¿Quién ha adoptado este acuerdo y cuál es su papel en su implementación?
+                
+                * ¿Dónde se publicará este acuerdo y cómo se puede verificar?
+            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2021-21214":
@@ -583,7 +925,24 @@ def resumenes(enfoque, BOE):
 
                 En general, el texto proporciona detalles sobre la decisión del Tribunal Constitucional y el contexto en el que se enmarca, así como la información relevante sobre el caso y la ley en cuestión.
                                 """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4 = """
+                El texto proporcionado parece ser un documento formal relacionado con el derecho constitucional y los procedimientos judiciales en España. Específicamente, describe una decisión del Tribunal Constitucional respecto a una demanda presentada contra un Real Decreto-ley que introdujo ciertas medidas fiscales y relacionadas con la energía.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Cuál fue el resultado de la demanda que impugnaba el Real Decreto-ley 12/2021?
+                
+                * ¿Qué disposición específica del Real Decreto-ley fue impugnada en el tribunal?
+                
+                * ¿Quién presentó la demanda contra el Real Decreto-ley?
+                
+                * ¿Cuándo tomó el Tribunal Constitucional su decisión sobre este caso?
+                
+                * ¿Cuál es la importancia de esta sentencia judicial en el derecho constitucional español?
+            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2022-12754":
@@ -640,7 +999,26 @@ def resumenes(enfoque, BOE):
 
                 En general, este texto ofrece una visión sobre la interpretación y aplicación de leyes y regulaciones específicas relacionadas con los bienes de dominio público en España.
                             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4 = """
+                El texto proporcionado parece ser un documento legal o una decisión judicial sobre la constitucionalidad de ciertas disposiciones de la ley española "Ley 7/2021, de 20 de mayo, de cambio climático y transición energética". El texto discute la interpretación de los Artículos 20 y 2 de esta ley, así como las implicaciones para el régimen de concesiones otorgadas en terrenos de dominio público.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Cuáles son las disposiciones clave en el Artículo 20 de la Ley 7/2021 respecto a la duración de las concesiones en terrenos de dominio público?
+                
+                * ¿Cómo interactúan estas disposiciones con las del Artículo 2 de la Ley 2/2013, que estableció una duración máxima para ciertos tipos de concesiones?
+                
+                * ¿Existe un conflicto entre la nueva ley y los derechos o concesiones existentes otorgados antes de su entrada en vigor?
+                
+                * ¿Cuál es el estado legal de las concesiones otorgadas bajo el antiguo régimen que ahora están por renovarse?
+                
+                * ¿Cómo puede la administración o los tribunales resolver estas ambigüedades y asegurar el cumplimiento de los principios de legalidad, legitimidad y predictibilidad?
+
+                De manera más general, este texto puede ser utilizado como referencia para entender el marco legal que rige los terrenos de dominio público y las concesiones en España.
+            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2022-2707":
@@ -696,7 +1074,24 @@ def resumenes(enfoque, BOE):
                 
                 En general, el texto ofrece información detallada sobre las disposiciones y objetivos del decreto-ley, que puede ser útil para propietarios de inmuebles, miembros de comunidades, arquitectos, ingenieros y responsables de políticas interesados en promover prácticas de construcción sostenible.
                             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+                            
+            resumen4 = """
+                El texto proporcionado parece ser un decreto-ley o reglamento relacionado con la eficiencia energética y las energías renovables en Cataluña, España. Específicamente, parece centrarse en la modificación del Código Civil de Cataluña para facilitar la instalación de medidas de eficiencia energética y sistemas de energías renovables en edificios sujetos al régimen de propiedad horizontal.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Cuáles son las nuevas regulaciones respecto a la eficiencia energética y los sistemas de energías renovables en los edificios?
+                
+                * ¿Cómo afectarán estas regulaciones a los propietarios y comunidades en Cataluña?
+                
+                * ¿Cuáles son los beneficios y desafíos asociados con la instalación de medidas de eficiencia energética y sistemas de energías renovables en los edificios?
+                
+                * ¿Cómo afectará la modificación del Código Civil de Cataluña al desarrollo de proyectos de energía sostenible en la región?
+
+                En general, este texto proporciona información sobre las políticas y regulaciones que rigen la eficiencia energética y las energías renovables en Cataluña, siendo relevante para investigadores, legisladores y profesionales que trabajan en estas áreas.
+                            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2022-2982":
@@ -744,7 +1139,22 @@ def resumenes(enfoque, BOE):
 
                 En resumen, el texto proporciona información sobre las enmiendas al decreto-ley y sus efectos en la normativa vigente, ofreciendo claridad sobre cómo las correcciones impactan a las partes interesadas en Cataluña.
                             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+                            
+            resumen4 = """
+                El texto proporcionado parece ser un documento oficial del gobierno, específicamente una nota de corrección publicada en el Boletín Oficial del Estado (BOE), el diario oficial de España. El documento corrige errores en un decreto-ley anterior y modifica ciertas disposiciones relacionadas con la eficiencia energética y las energías renovables en edificios sujetos a propiedad horizontal.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Qué cambios se hicieron al decreto-ley original?
+                
+                * ¿Cómo afectan estos cambios a la regulación de la eficiencia energética y las energías renovables en los edificios?
+                
+                * ¿Cuáles son algunos de los artículos o disposiciones específicos que fueron modificados o corregidos?
+                
+                * ¿Cuál es la base legal para estos cambios y cuál es su fecha de entrada en vigor?
+            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2023-26461":
@@ -806,7 +1216,26 @@ def resumenes(enfoque, BOE):
 
                 En resumen, el texto ofrece una visión detallada de las políticas energéticas y ambientales de España y puede utilizarse para responder a preguntas relacionadas con estos temas.
                             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+                            
+            resumen4 = """
+                Basado en la información contextual proporcionada, parece tratarse de un documento gubernamental relacionado con la política energética en España. Específicamente, el texto parece detallar medidas y directrices para dos programas destinados a promover las energías renovables y reducir la dependencia de los combustibles fósiles.
+
+                El texto aborda cambios en las regulaciones, modificaciones a las reglas existentes y actualizaciones a planes previamente aprobados. También menciona fechas límite y plazos para la implementación de estos cambios.
+
+                Este documento puede responder preguntas como:
+
+                * ¿Cuáles son los objetivos y metas de los dos programas energéticos mencionados en el texto?
+                
+                * ¿Cómo pretenden estos programas promover las energías renovables y reducir la dependencia de los combustibles fósiles?
+                
+                * ¿Qué medidas y directrices específicas se delinean para cada programa?
+                
+                * ¿Cuáles son las fechas clave y los plazos para implementar estos cambios?
+                
+                * ¿Cómo se relacionan estas regulaciones con las políticas y directrices de la Unión Europea (UE)?
+            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-A-2023-9215":
@@ -858,8 +1287,29 @@ def resumenes(enfoque, BOE):
                 * ¿Existen requisitos procedimentales específicos que deben cumplirse antes de que estos cambios puedan entrar en vigor?
 
                 En general, el texto parece ser un documento legal formal con implicaciones significativas para la política económica y fiscal en España.
-"""
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            """
+            
+            resumen4 = """
+                El texto proporcionado parece ser una decisión o sentencia constitucional emitida por el Tribunal Constitucional en España. Específicamente, parece tratarse de una resolución sobre un caso constitucional que involucra una disputa entre el gobierno español y el Parlamento de Canarias respecto a la modificación del régimen económico y fiscal de Canarias.
+
+                El texto aborda varios puntos clave, incluyendo:
+
+                1. La supuesta violación de la garantía institucional del régimen económico y fiscal de Canarias, que requiere la consulta previa con el Parlamento de Canarias.
+                
+                2. La falta de una justificación válida por parte del gobierno para modificar el régimen económico y fiscal sin consultar primero al Parlamento de Canarias.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Cuáles son las implicaciones constitucionales de modificar el régimen económico y fiscal de Canarias?
+                
+                * ¿Es constitucional que el gobierno español realice cambios en el régimen económico y fiscal de las Islas Canarias sin consultar previamente al Parlamento de Canarias?
+                
+                * ¿Cómo afecta esta sentencia a la relación entre el gobierno central y la Comunidad Autónoma de Canarias?
+                
+                * ¿Cuáles son las posibles consecuencias de violar la garantía institucional del régimen económico y fiscal de Canarias?
+            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-B-2018-54744":
@@ -914,7 +1364,26 @@ def resumenes(enfoque, BOE):
                 
                 * ¿Quiénes son los principales interesados involucrados en el proyecto?
             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4  = """
+                El texto proporcionado parece ser un anuncio público del Boletín Oficial del Estado (BOE) del gobierno español, específicamente una notificación sobre un contrato adjudicado por el Ayuntamiento de Marina de Cudeyo para la rehabilitación, reforma y mejora de la iluminación pública del municipio.
+
+                Este texto puede responder preguntas como:
+
+                * ¿Quién es la entidad que adjudicó el contrato?
+                
+                * ¿Cuál es el propósito del contrato?
+                
+                * ¿Qué empresa fue adjudicataria del contrato?
+                
+                * ¿Cuándo se formalizó el contrato y cuál fue el importe total gastado?
+                
+                * ¿Cuál era el precio base para licitar en el contrato?
+
+                En general, este texto proporciona información sobre un proceso de contratación pública en España, incluyendo detalles sobre la entidad contratante, el objeto del contrato, los licitadores y los términos del contrato.
+                            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)
 
         elif BOE == "BOE-B-2019-52073":
@@ -977,5 +1446,24 @@ def resumenes(enfoque, BOE):
 
             En general, el texto proporciona información sobre un proceso específico de contratación pública y los detalles relacionados con el mismo.
             """
-            resumenes = [resumen1, resumen2, resumen3, resumen4, resumen5]
+            
+            resumen4 = """
+                El texto proporcionado parece ser un anuncio oficial del Boletín Oficial del Estado (BOE) del gobierno español, específicamente una notificación sobre un contrato público para servicios de construcción.
+
+                Este texto puede responder diversas preguntas como:
+
+                * ¿Cuál era el propósito del contrato público?
+                
+                * ¿Quién fue el contratista principal responsable de llevar a cabo el proyecto?
+                
+                * ¿Cuál fue el presupuesto asignado para el proyecto?
+                
+                * ¿Cuáles eran los requisitos específicos u objetivos del proyecto?
+                
+                * ¿Cuándo se adjudicó el contrato y cuándo comenzó el proyecto?
+
+                El texto ofrece información detallada sobre la entidad contratante, el alcance del trabajo, el proceso de licitación y el contratista adjudicatario. Puede ser utilizado como referencia por investigadores, responsables de políticas o individuos interesados en entender cómo se gestionan los contratos públicos en España.
+                            
+            """
+            resumenes = [resumen1, resumen2, resumen3, resumen4]
             return random.choice(resumenes)

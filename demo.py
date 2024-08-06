@@ -86,3 +86,13 @@ if st.button('Generar Resumen'):
         elif summary_method == 'Summary Index':
             resumen = resumenes.resumenes("summaryindex", selected_file)
             st.write(resumen)
+
+        with open(file_path, "rb") as file:
+            st.download_button(
+                label="Descargar BOE Original",
+                data=file,
+                file_name=f"{selected_file}.pdf",
+                mime="application/pdf"
+            )
+            
+            
