@@ -1,6 +1,6 @@
 import random
 
-def resumenes(enfoque, BOE):
+def citas(enfoque, BOE):
     # Lista de BOEs válidos
     boes_validos = [
         "BOE-A-2015-6119", "BOE-A-2019-2031", "BOE-A-2021-10584",

@@ -13,6 +13,7 @@ from llama_index.core import SummaryIndex
 from transformers import AutoTokenizer, pipeline
 import data
 import resumenes
+import citas
 
 # Configuración de logging
 logging.basicConfig(level=logging.INFO)
@@ -80,12 +81,34 @@ if st.button('Generar Resumen'):
             st.write(resumen)
         
         elif summary_method == 'Document Summary Index':
-            resumen = resumenes.resumenes("documentsummaryindex", selected_file)
-            st.write(resumen)
+            #resumen = resumenes.resumenes("documentsummaryindex", selected_file)
+            resumen, citas = citas.citas("documentsummaryindex", selected_file)
+                    
+            # Crear dos columnas: una para el resumen y otra para las citas
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.header("Resumen del Documento")
+                st.write(resumen)
+            
+            with col2:
+                st.header("Citas")
+                st.write(citas)
             
         elif summary_method == 'Summary Index':
-            resumen = resumenes.resumenes("summaryindex", selected_file)
-            st.write(resumen)
+            #resumen = resumenes.resumenes("summaryindex", selected_file)
+            resumen, citas = citas.citas("summaryindex", selected_file)
+            
+            # Crear dos columnas: una para el resumen y otra para las citas
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.header("Resumen del Documento")
+                st.write(resumen)
+            
+            with col2:
+                st.header("Citas")
+                st.write(citas)
 
         with open(file_path, "rb") as file:
             st.download_button(
