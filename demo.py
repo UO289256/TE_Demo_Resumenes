@@ -221,7 +221,7 @@ if not st.session_state.resumen_generado:
 
 # Mostrar el resumen si ya se generó
 if st.session_state.resumen_generado:
-    st.header('Resumen Generado')
+    st.header('Probando')
     st.write(st.session_state.resumen)
     if st.session_state.citas:
         st.header('Citas')
