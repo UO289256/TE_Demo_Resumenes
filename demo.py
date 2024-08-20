@@ -127,6 +127,7 @@ import streamlit as st
 import data
 import resumenes
 import citas
+from streamlit.components.v1 import html
 
 # Configuración de logging
 logging.basicConfig(level=logging.INFO)
@@ -148,6 +149,7 @@ if 'selected_file' not in st.session_state:
 def reset():
     st.session_state.resumen_generado = False
     st.session_state.selected_file = None
+    st.experimental_rerun()
 
 # Mostrar la interfaz de selección si no se ha generado un resumen
 if not st.session_state.resumen_generado:
@@ -186,42 +188,38 @@ if not st.session_state.resumen_generado:
             "Un Index es una estructura de datos organizada en nodos a partir de los cuales se obtiene el resumen del documento..."
         )
 
-    # Botón para generar el resumen con un spinner de carga
-    st.markdown(
-        """
-        <style>
-        div.stButton > button:first-child {
-            margin: 0 auto;
-            display: block;
-        }
-        </style>
-        """, unsafe_allow_html=True
-    )
-
     if st.button('Generar Resumen'):
-        with st.spinner('Generando resumen...'):
-            time.sleep(0.5) # Simular un proceso de carga
+        # Redireccionar a una nueva "página" que muestra el progreso del resumen
+        st.session_state.show_summary = True
+        st.experimental_rerun()
 
-            # Cargar el contenido del PDF seleccionado
-            file_path = os.path.join(path, selected_file + ".pdf")
-            docs = data.load_pdfs(path)
-            text = data.obtener_texto(docs, selected_file + ".pdf")
-            
-            # Guardar resumen en el estado
-            if summary_method == 'LLM Tradicional':
-                resumen = resumenes.resumenes("tradicional", selected_file)
-            elif summary_method == 'Document Summary Index':
-                resumen, citas_result = citas.citas("documentsummaryindex", selected_file)
-            elif summary_method == 'Summary Index':
-                resumen, citas_result = citas.citas("summaryindex", selected_file)
-            
-            st.session_state.resumen = resumen
-            st.session_state.citas = citas_result
-            st.session_state.resumen_generado = True
+# Mostrar el resumen si se está en el proceso de generación
+if 'show_summary' in st.session_state and st.session_state.show_summary:
+    with st.spinner('Generando resumen...'):
+        time.sleep(0.5)  # Simular un proceso de carga
+
+        # Cargar el contenido del PDF seleccionado
+        file_path = os.path.join(path, st.session_state.selected_file + ".pdf")
+        docs = data.load_pdfs(path)
+        text = data.obtener_texto(docs, st.session_state.selected_file + ".pdf")
+        
+        # Guardar resumen en el estado
+        if summary_method == 'LLM Tradicional':
+            resumen = resumenes.resumenes("tradicional", st.session_state.selected_file)
+        elif summary_method == 'Document Summary Index':
+            resumen, citas_result = citas.citas("documentsummaryindex", st.session_state.selected_file)
+        elif summary_method == 'Summary Index':
+            resumen, citas_result = citas.citas("summaryindex", st.session_state.selected_file)
+        
+        st.session_state.resumen = resumen
+        st.session_state.citas = citas_result
+        st.session_state.resumen_generado = True
+        st.session_state.show_summary = False
+        st.experimental_rerun()
 
 # Mostrar el resumen si ya se generó
 if st.session_state.resumen_generado:
-    st.header('Probando')
+    st.header('Resumen Generado')
     st.write(st.session_state.resumen)
     if st.session_state.citas:
         st.header('Citas')
@@ -238,5 +236,6 @@ if st.session_state.resumen_generado:
     
     # Botón para volver atrás
     st.button('Volver atrás', on_click=reset, key='reset_button')
+
 
             
