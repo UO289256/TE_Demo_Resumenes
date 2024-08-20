@@ -1,3 +1,4 @@
+"""
 import os
 import time
 import logging
@@ -117,5 +118,125 @@ if st.button('Generar Resumen'):
                 file_name=f"{selected_file}.pdf",
                 mime="application/pdf"
             )
+"""
+
+import os
+import time
+import logging
+import streamlit as st
+import data
+import resumenes
+import citas
+
+# Configuración de logging
+logging.basicConfig(level=logging.INFO)
+
+# Directorio de los BOEs
+path = './data/BOEs/'
+
+# Configuración de la interfaz de Streamlit
+st.set_page_config(page_title='Resumen de Documentos BOE', layout='wide')
+st.title('Resumen de Documentos BOE')
+
+# Inicializar estado de la aplicación
+if 'resumen_generado' not in st.session_state:
+    st.session_state.resumen_generado = False
+
+if 'selected_file' not in st.session_state:
+    st.session_state.selected_file = None
+
+def reset():
+    st.session_state.resumen_generado = False
+    st.session_state.selected_file = None
+
+# Mostrar la interfaz de selección si no se ha generado un resumen
+if not st.session_state.resumen_generado:
+    # Información sobre los enfoques
+    with st.expander("Información sobre los enfoques", expanded=False):
+        st.header('LLMs Tradicionales')
+        st.write(
+            "Los Modelos de Lenguaje de Gran Escala (LLMs) son sistemas avanzados entrenados con grandes cantidades de datos textuales..."
+        )
+        st.header('Enfoque RAG')
+        st.write(
+            "Los LLMs son sistemas avanzados entrenados con grandes volúmenes de datos textuales. Sin embargo, estos modelos no están específicamente entrenados con datos particulares de usuarios individuales..."
+        )
+
+    # Generador de resúmenes
+    st.header('Generador de resúmenes')
+    col1, col2 = st.columns([2, 1])
+
+    with col1:
+        nombres_archivos = data.obtener_nombres_archivos(path)
+        selected_file = st.selectbox('Selecciona un documento BOE', nombres_archivos)
+        st.session_state.selected_file = selected_file
+
+    with col2:
+        enfoque = st.selectbox('Selecciona el enfoque con el que quieres obtener el resumen.', ['LLM Tradicional', 'Enfoque RAG'])
+
+    st.write(
+        "RECUERDA: El enfoque tradicional emplea un modelo de aprendizaje profundo para generar los resúmenes..."
+    )
+
+    if enfoque == 'LLM Tradicional':
+        summary_method = 'LLM Tradicional'
+    else:
+        summary_method = st.selectbox('Selecciona el método de resumen', ['Document Summary Index', 'Summary Index'])
+        st.write(
+            "Un Index es una estructura de datos organizada en nodos a partir de los cuales se obtiene el resumen del documento..."
+        )
+
+    # Botón para generar el resumen con un spinner de carga
+    st.markdown(
+        """
+        <style>
+        div.stButton > button:first-child {
+            margin: 0 auto;
+            display: block;
+        }
+        </style>
+        """, unsafe_allow_html=True
+    )
+
+    if st.button('Generar Resumen'):
+        with st.spinner('Generando resumen...'):
+            time.sleep(0.5) # Simular un proceso de carga
+
+            # Cargar el contenido del PDF seleccionado
+            file_path = os.path.join(path, selected_file + ".pdf")
+            docs = data.load_pdfs(path)
+            text = data.obtener_texto(docs, selected_file + ".pdf")
             
+            # Guardar resumen en el estado
+            if summary_method == 'LLM Tradicional':
+                resumen = resumenes.resumenes("tradicional", selected_file)
+            elif summary_method == 'Document Summary Index':
+                resumen, citas_result = citas.citas("documentsummaryindex", selected_file)
+            elif summary_method == 'Summary Index':
+                resumen, citas_result = citas.citas("summaryindex", selected_file)
+            
+            st.session_state.resumen = resumen
+            st.session_state.citas = citas_result
+            st.session_state.resumen_generado = True
+
+# Mostrar el resumen si ya se generó
+if st.session_state.resumen_generado:
+    st.header('Resumen Generado')
+    st.write(st.session_state.resumen)
+    if st.session_state.citas:
+        st.header('Citas')
+        st.write(st.session_state.citas)
+
+    file_path = os.path.join(path, st.session_state.selected_file + ".pdf")
+    with open(file_path, "rb") as file:
+        st.download_button(
+            label="Descargar BOE Original",
+            data=file,
+            file_name=f"{st.session_state.selected_file}.pdf",
+            mime="application/pdf"
+        )
+    
+    # Botón para volver atrás
+    st.button('Volver atrás', on_click=reset, key='reset_button')
+
             
