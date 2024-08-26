@@ -212,6 +212,7 @@ if 'show_summary' in st.session_state and st.session_state.show_summary:
             resumen, citas_result = citas.citas("summaryindex", st.session_state.selected_file)
             st.session_state.citas = citas_result
         
+        st.session_state.summary_method = summary_method
         st.session_state.resumen = resumen
         st.session_state.resumen_generado = True
         st.session_state.show_summary = False
@@ -221,7 +222,7 @@ if 'show_summary' in st.session_state and st.session_state.show_summary:
 if st.session_state.resumen_generado:
     st.header('Resumen Generado')
     st.write(st.session_state.resumen)
-    if summary_method == 'Document Summary Index' or summary_method == 'Summary Index':
+    if st.session_state.summary_method == 'Document Summary Index' or st.session_state.summary_method == 'Summary Index':
         if st.session_state.citas:
             st.header('Citas')
             st.write(st.session_state.citas)
