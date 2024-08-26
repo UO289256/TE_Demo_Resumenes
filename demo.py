@@ -221,9 +221,10 @@ if 'show_summary' in st.session_state and st.session_state.show_summary:
 if st.session_state.resumen_generado:
     st.header('Resumen Generado')
     st.write(st.session_state.resumen)
-    if st.session_state.citas:
-        st.header('Citas')
-        st.write(st.session_state.citas)
+    if summary_method == 'Document Summary Index' or summary_method == 'Summary Index':
+        if st.session_state.citas:
+            st.header('Citas')
+            st.write(st.session_state.citas)
 
     file_path = os.path.join(path, st.session_state.selected_file + ".pdf")
     with open(file_path, "rb") as file:
