@@ -127,7 +127,6 @@ import streamlit as st
 import data
 import resumenes
 import citas
-from streamlit.components.v1 import html
 
 # Configuración de logging
 logging.basicConfig(level=logging.INFO)
@@ -208,11 +207,12 @@ if 'show_summary' in st.session_state and st.session_state.show_summary:
             resumen = resumenes.resumenes("tradicional", st.session_state.selected_file)
         elif summary_method == 'Document Summary Index':
             resumen, citas_result = citas.citas("documentsummaryindex", st.session_state.selected_file)
+            st.session_state.citas = citas_result
         elif summary_method == 'Summary Index':
             resumen, citas_result = citas.citas("summaryindex", st.session_state.selected_file)
+            st.session_state.citas = citas_result
         
         st.session_state.resumen = resumen
-        st.session_state.citas = citas_result
         st.session_state.resumen_generado = True
         st.session_state.show_summary = False
         st.experimental_rerun()
